@@ -1,0 +1,25 @@
+16
+1 0 0
+2 0 0
+3 0 0
+4 0 0
+3 2 -8
+0 3 -5
+3 4 0
+4 4 -3
+1 7 0
+2 7 -4
+3 7 3
+4 7 5 
+1 9 3
+2 10 -3
+3 15 3
+7 10 0
+
+
+//El numero correspondiente a la cantidad de puntos de control debe tener una raiz cuadrada entera
+//Cantidades de puntos de control validas son por ejemplo: 9, 16, 25
+//Esto debido a que con estos puntos de control se forma una matriz de Vector3 de nxn por lo que se debe garantizar esta condición.
+
+//En este caso los primeros 4 puntos de control corresponden a la primera fila de la matriz de Vectores3
+//Los siguientes 4 a la segunda fila y así sucesivamente.
