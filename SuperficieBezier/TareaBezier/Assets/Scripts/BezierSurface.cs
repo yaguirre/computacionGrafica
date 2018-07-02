@@ -16,6 +16,10 @@ public class BezierSurface : MonoBehaviour {
         Mesh mesh = new Mesh();
 
         Vector3[,] controlPoints = LeerArchivo("Assets\\Resources\\puntosControl.txt");
+        //Vector3[,] controlPoints = new Vector3[,] { { new Vector3(-15, -10, 110), new Vector3(-5, 0, 110), new Vector3(5, 0, 110), new Vector3(15, 10, 110)},
+                                                    //{ new Vector3(-15, 0, 100), new Vector3(-5, 0, 100), new Vector3(5, 0, 100), new Vector3(15,0,100)},
+                                                    //{ new Vector3(-15, -10, 90), new Vector3(-5, 0, 90), new Vector3(5, 0, 90), new Vector3(15, 10, 90)},
+                                                    //{ new Vector3(-15, 0, 100), new Vector3(-5, 0, 100), new Vector3(5, 0, 100), new Vector3(15,0,100) }};
         List<Vector3> listaVertices = new List<Vector3>();
         Vector3 aux = new Vector3(0, 0, 0);
 
@@ -101,7 +105,7 @@ public class BezierSurface : MonoBehaviour {
         numPointsControl = Convert.ToInt32(Math.Sqrt(Npuntos));
         int puntoActual = 0;
 
-        while (puntoActual<Npuntos){
+        while (puntoActual < Npuntos){
             line = reader.ReadLine();
             string[] coordenadas = line.Split(' ');
             float x = Convert.ToSingle(coordenadas[0]);
@@ -111,13 +115,13 @@ public class BezierSurface : MonoBehaviour {
             puntoActual++;
         }
 
-        Vector3[,] controlPoints = new Vector3[numPointsControl, numPointsControl];
+        Vector3[,] controlPoints = new Vector3[3, 4];
         int posFila = 0;
         int posCol = 0;
         foreach(Vector3 punto in valores){
             controlPoints[posFila, posCol] = punto;
             posCol++;
-            if (posCol == numPointsControl){
+            if (posCol == 4){
                 posFila++;
                 posCol = 0;
             }

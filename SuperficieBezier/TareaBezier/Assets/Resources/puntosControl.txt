@@ -1,20 +1,18 @@
-16
-1 0 0
-2 0 0
-3 0 0
-4 0 0
-3 2 -8
-0 3 -5
-3 4 0
-4 4 -3
-1 7 0
-2 7 -4
-3 7 3
-4 7 5 
-1 9 3
-2 10 -3
-3 15 3
-7 10 0
+4
+0 100 0
+30 200 90
+80 20 -90
+100 100 0
+8
+0 10 0
+0 10 10
+10 10 10
+10 10 0
+0 0 0
+0 0 10
+10 0 10
+10 0 0
+
 
 
 //El numero correspondiente a la cantidad de puntos de control debe tener una raiz cuadrada entera
